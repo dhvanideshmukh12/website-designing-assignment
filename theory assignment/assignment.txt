@@ -1,0 +1,79 @@
+ 1. Introduction to Website Design and HTML Basics
+ Theory Assignments
+ Q1. Explain the structure of an HTML document and the purpose of DOCTYPE.
+
+    Structure of an HTML Document
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Web Page</title>
+        </head>
+        <body>
+        <h1>Welcome to my website</h1>
+        <p>This is a paragraph of text.</p>
+        </body>
+        </html>
+
+    Explanation of Each Part:
+        <!DOCTYPE html>
+            Declares the document type (HTML5).
+            It tells the browser to render the page using the latest standard.
+        <html lang="en">
+            Root element of the HTML document.
+            lang="en" specifies that the language is English.
+        <head>
+            Contains meta-information about the document (not visible on the page).
+            Includes things like:
+                <meta charset="UTF-8"> → character encoding.
+                <meta name="viewport"> → responsiveness for mobile devices.
+                <title> → page title shown on the browser tab.
+                Links to stylesheets, scripts, and favicons.
+        <body>
+            Contains all the visible content: headings, paragraphs, images, links, etc.
+            This is what the user sees and interacts with.
+
+    Purpose of <!DOCTYPE>
+        It stands for Document Type Declaration.
+        <!DOCTYPE html> specifically declares that the page is written in HTML5.
+        Helps browsers to render the page correctly using standard mode (not quirks mode, which is for older HTML versions).
+        It isn't an HTML tag, just an instruction to the browser.
+
+
+ Q2. List and explain at least five common HTML tags used in website design.
+    1. <div> — Division Container
+        Purpose: Acts as a container for grouping HTML elements, commonly used for layout and styling.
+        Why it's important: Helps structure sections of a page and apply CSS or JavaScript easily.
+            <div class="header">
+                <h1>My Website</h1>
+            </div>
+    2. <h1> to <h6> — Headings
+        Purpose: Defines headings; <h1> is the most important, <h6> the least.
+        Why it's important: Provides structure and improves accessibility and SEO.
+            <h1>Main Title</h1>
+            <h2>Subheading</h2>
+    3. <p> — Paragraph
+        Purpose: Represents a paragraph of text.
+        Why it's important: Used for adding readable content, descriptions, and body text.
+            <p>This is a paragraph about the website content.</p>
+    4. <a> — Anchor (Link)
+        Purpose: Creates hyperlinks to other pages, websites, or sections of the same page.
+        Why it's important: Enables navigation between pages.
+            <a href="https://example.com">Visit Example</a>
+    5. <img> — Image
+        Purpose: Embeds an image on the webpage.
+        Why it's important: Enhances the visual appeal and user engagement.
+            <img src="logo.png" alt="Website Logo">
+
+
+ Q3. Describe the difference between block-level and inline elements in HTML.
+     Block-Level Elements
+        Block-level elements take up the full width available, and they always start on a new line.
+        Common Examples:
+            <div>, <p>, <h1> to <h6>, <section>, <article>, <header>, <footer>, <ul>, <ol>, <li>, <table>
+
+     Inline Elements
+        Inline elements do not start on a new line and only take up as much width as necessary.
+        Common Examples:
+            <span>, <a>, <strong>, <em>, <img>, <label>, <input>, <br>
