@@ -1,0 +1,34 @@
+ Theory Assignments
+
+ 1. Explain the difference between inline, internal, and external CSS.
+    inline css:
+        Inline CSS is used to apply styles directly within an HTML element by using the style attribute. It affects only that   specific element.
+
+
+    internal css:
+        Internal CSS is placed within the <style> tag inside the <head> section of an HTML document. It is used for styling a single document and applies to all elements within that document.
+
+    external css:
+        External CSS is written in a separate .css file and linked to an HTML document using the <link> tag. This approach is ideal for larger websites as styles can be applied across multiple pages.
+
+
+ 2. Describe CSS selectors and list the types of selectors (e.g., element, class, id).
+    CSS selectors are patterns used to select and style HTML elements. These selectors help target specific elements to apply styles.
+    
+    Types of selectors:
+        1. Universal Selector
+        2. Id Selector
+        3. Class Selector
+        4. Group Selector
+        5. Element Selector
+        6. Descendant Selector
+
+ 3. Discuss the CSS boxmodel and its components
+    The CSS Box Model is a key concept in web design that describes how the dimensions and layout of elements are structured and rendered in a browser. Every HTML element is considered a box, and this box consists of several layers, each contributing to the overall size and spacing of the element.
+
+    Components of the CSS Box Model:
+        Content: width, height
+        Padding: padding, padding-top, padding-right, padding-bottom, padding-left
+        Border: border, border-width, border-style, border-color
+        margine: margin, margin-top, margin-right, margin-bottom, margin-left
+    

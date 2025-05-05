@@ -1,0 +1,47 @@
+<!--  Assignment 12: Creating an Image Gallery -->
+<!-- Objective: Practice working with images and structuring an image gallery layout -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gallery</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        table{
+            margin: 0 auto; 
+            border-spacing: 20px;
+        }
+        img{
+            width: 200px; 
+            height: auto;
+            border-radius: 8px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>My Image Gallery</h1>
+  
+    <table>
+      <tr>
+          <td><figure>
+            <img src="../image/img1.jpg" alt="image1">
+            <figcaption>This is the image 1</figcaption>
+          </figure>
+          </td>
+        <td><img src="../image/img2.jpeg" alt="image2" ></td>
+        <td><img src="../image/img3.jpeg" alt="image3" ></td>
+      </tr>
+      <tr>
+        <td><img src="../image/img4.jpeg" alt="image4" ></td>
+        <td><img src="../image/img5.jpeg" alt="image5"></td>
+        <td><img src="../image/img6.jpeg" alt="image6"></td>
+      </tr>
+    </table>
+  </body>
+  
+</html>

@@ -1,0 +1,27 @@
+nav{
+    display: flex;
+    justify-content: center;
+    margin: 5px 5px;
+    padding: 3px 5px;
+    background-color: rgb(255, 227, 227);
+}
+ul{
+    gap: 20px;
+    align-content: center;
+
+}
+li{
+    display: inline-block;
+    padding: 20px;
+    background-color: rgb(255, 233, 233);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+
+}
+a:hover{
+    color: red;
+}
+a{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+}

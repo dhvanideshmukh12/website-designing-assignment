@@ -1,0 +1,16 @@
+.container {
+    display: flex;               
+    justify-content: center;     
+    align-items: center;        
+    height: 100vh;               
+}
+.card{
+    height: 300px;
+    width: 450px;
+    border: 2px solid;
+    color: orange;
+    border-style:double;
+    border-radius: 20px;
+    box-shadow: 10px 5px 5px rgb(254, 196, 89);
+
+}
