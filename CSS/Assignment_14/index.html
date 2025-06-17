@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product card</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .main{
+
+        }
+        .card {
+            height: 400px;
+            width: 300px;
+            border: 1px solid lightgray;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .image{
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+        h2,p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="card">
+            
+                <img class="image" src="img/puma.jfif" alt="">
+            
+                <h2 class="title">PUMA</h2>
+                <p class="price">₹3,749 <del style="color: grey;">MRP: ₹7,499</del></p>
+                <p class="dec">Puma Speedcat LS Black & White Sneakers</p>
+        </div>
+    </div>
+</body>
+</html>

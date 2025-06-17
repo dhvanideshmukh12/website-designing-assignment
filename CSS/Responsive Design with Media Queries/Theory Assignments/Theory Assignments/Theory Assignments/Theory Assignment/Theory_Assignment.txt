@@ -1,0 +1,51 @@
+ 
+ 3. Responsive Design with Media Queries
+
+ Theory Assignments
+
+ 1. Define responsive design and its importance in modern web development.
+
+    Responsive Design is a web design approach that ensures a website automatically adjusts its layout, images, and functionality to fit various screen sizes and devices such as desktops, tablets, and mobile phones.
+
+    Importance in Modern Web Development:
+     -Improved User Experience: Ensures content is readable and accessible on all devices.
+
+     -Mobile Usage Growth: Most users access websites via smartphones, making responsiveness essential.
+
+     -SEO Benefits: Google favors mobile-friendly sites in its search results.
+
+     -Cost Efficiency: A single responsive site is easier to maintain than separate versions for different devices.
+
+     -Consistency Across Devices: Delivers a uniform user interface regardless of device used.
+
+
+ 2. Explain the role of media queries in responsive design.
+    Media Queries are CSS rules used to apply styles depending on a device’s properties such as screen width, height, resolution, and orientation.
+
+    Purpose and Role:
+        -Customize Layouts: Adjusts page styling based on screen size.
+
+        -Flexible Design: Helps modify text size, grid layouts, and image visibility for different devices.
+
+        -Mobile-First Approach: Allows developers to style for small screens first, then expand to larger devices.
+
+    Example Syntax:
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+        }
+
+ 3. Describe how viewportsettings affect mobile displays.
+    The viewport is the user's visible area of a web page on a device screen. Mobile browsers often simulate a desktop screen unless told otherwise.
+
+    Viewport Meta Tag:
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    Effect on Mobile Displays:
+
+        -Device-Based Width: Sets the width of the page to match the device's screen.
+
+        -Zoom Control: Controls how the page scales on load (initial-scale=1.0).
+
+        -Responsive Layout Activation: Ensures that media queries and responsive units (%, vw, em) work correctly on mobile devices.

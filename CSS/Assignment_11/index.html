@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Classes and Pseudo-Elements</title>
+    <style>
+        header{
+            background-color: black;
+            color: white;
+            margin-top: 20px;
+            padding: 20px;
+        }
+        .navbar{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            gap: 30px;
+        }
+
+        li a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+
+        li a:visited {
+            color: green;
+        }
+
+        li a:hover {
+            color: red;
+        }
+
+        li a:active {
+            color: blue;
+        }
+
+        .main{
+            margin: 20px;
+            padding: 20px;
+        }
+
+        p::first-line{
+            color:blue;
+        }
+        h1{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+        }
+        h1::before{
+            content: '🌳';
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="Team.html">Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+    <div class="main">
+        <h1>
+             Pseudo-Classes and Pseudo-Elements
+        </h1>
+        <p class="first-line">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ducimus veniam eligendi cum labore, illo laborum repellendus voluptatibus tempora quae sapiente aut possimus doloremque quibusdam! Consectetur voluptas excepturi commodi et!
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Gallery with Transforms & Transitions</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background: #f0f0f0;
+        text-align: center;
+    }
+
+    .title {
+        margin-bottom: 30px;
+        color: #333;
+    }
+
+    .gallery {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .gallery img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.8s ease, box-shadow 0.8s ease;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.1) rotate(3deg);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+  </style>
+</head>
+<body>
+  <h1 class="title">Image Gallery</h1>
+  <div class="gallery">
+    <img src="../image/img1.jpg" alt="Image 1"/>
+    <img src="../image/img2.jpeg" alt="Image 2"/>
+    <img src="../image/img3.jpeg" alt="Image 3"/>
+    <img src="../image/img4.jpeg" alt="Image 4"/>
+  </div>
+</body>
+</html>

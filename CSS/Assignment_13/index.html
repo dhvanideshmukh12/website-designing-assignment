@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main{
+        position: relative;
+        height: 500px;
+        width: 500px;
+        border: 2px solid black;
+    }
+    .inner{
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        animation-name: Animation;
+        animation-timing-function: initial;
+        /* animation-iteration-count: infinite; */
+        animation-duration: 2s;
+        animation-delay: 1s;
+    }
+    @keyframes Animation {
+        0%,100%{
+            transform: translate(0,0);
+            background-color: red;
+        }
+        50%{
+            background-color: yellow;
+            transform: translate(400px,0);
+        }
+
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="inner">
+
+        </div>
+    </div>
+</body>
+</html>

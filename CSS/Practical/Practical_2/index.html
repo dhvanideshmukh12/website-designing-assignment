@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* -------- Horizontal Menu -------- */
+        .horizontal{
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .title{
+            background-color: aquamarine;
+            padding: 20px;
+        }
+        
+        .horizontal header{
+            background-color: black;
+            width: 100%;
+            color: white;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            padding-left: 20px;
+        }
+        .h-navbar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            gap:30px;
+            
+        }
+        .h-navbar li a{
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .h-navbar li a:hover{
+            color: grey;
+            transform: scale(1.1);
+        }
+        /* -------- Vertical Menu -------- */
+
+        .vertical{
+            padding: 20px;
+        }
+        .vertical header{
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            width: 200px;
+            height: 500px;
+            background-color: black;
+        }
+        .v-navbar{
+            display: block;
+            list-style: none;
+            margin-top: 30px;
+
+        }
+        .v-navbar li{
+            margin-bottom: 30px;
+
+        }
+        .v-navbar li a{
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .v-navbar li a:hover{
+            color: grey;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="horizontal">
+        <div class="title">
+            <h1>Horizontal Menu</h1>
+        </div>
+        <header>
+            <ul class="h-navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <div class="vertical">
+        <div class="title">
+            <h1>Vertical Menu</h1>
+        </div>
+        <header>
+            <ul class="v-navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+    </div>
+</body>
+</html>

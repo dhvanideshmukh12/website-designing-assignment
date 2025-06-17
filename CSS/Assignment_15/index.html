@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+        }
+        /* ------------ Hero Section ------------ */
+        .hero {
+            background-image: url('https://wallpapers.com/images/hd/coffee-stained-beige-aesthetic-laptop-6820fm8nqv16bn7p.jpg');
+            object-fit: cover;
+            background-size: cover;
+    /* background-color: #f9f7f4; */
+            object-fit: cover;
+            height: 500px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding:0 20px;
+            text-align: center;
+        }
+        .hero-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            color: #5b5555;
+            font-family: "Playfair Display", serif; 
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            font-style: normal;
+            margin-bottom: 25px;
+            color: #555;
+            font-family: "Lora", serif; 
+            font-weight: 400;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            background-color: white;
+            color: rgb(192, 167, 125);
+            border: none;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: rgb(192, 167, 125);
+            color: white;
+            cursor: pointer;
+        }
+
+        /* ------------ Features Section ------------ */
+        .features{
+            background-color: #f9f7f4; 
+            /* background-color: #e6e6e6; */
+        }
+        .title{
+            margin-top: 20px;
+            padding: 10px;
+            text-align: center;
+            font-family: "Playfair Display", serif; 
+
+        }
+        .feature-grid{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            gap:20px;
+            padding: 20px;
+        }
+        .cards{
+            height: 400px;
+            width: 350px;
+            border: 1px solid lightgray;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10PX;
+            box-shadow: 0PX 5PX 8PX grey;
+            
+        }
+        .cards:hover{
+            transform: scale(1.04);
+        }
+        .icon{  
+            height: 200px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5rem;
+            color: rgb(144, 227, 255);
+        }
+        .cards h3{
+            text-align: center;
+            font-size: 1.3rem;
+            color: #2a1341;
+            font-family: "Lora", serif;
+
+        }
+        .cards p{
+            margin-top: 10px;
+            text-align: center;
+            color: #555;
+            font-size: 0.95rem;
+            font-family: "Open Sans", sans-serif;
+        }
+        /* ------- Contact Us -------- */
+        .contactus{
+            height: 520px;
+            width: 100%;
+            background-color:#fefefe; 
+            margin-top: 20px;     
+            margin-bottom: 20px;
+            
+        }
+        .contactus .title{
+            
+            padding: 10px;
+            text-align: center;
+            font-family: "Playfair Display", serif;
+        }
+        
+        .form{
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+
+ 
+        }
+        
+        .contact-form{
+            padding: 70px;
+            background-color: #f9f7f4;
+            /* background-color: rgb(229, 227, 227); */
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 8px lightgray;
+        }
+        .input-group{
+            margin-top: 15px;
+            display: grid;
+
+
+        }
+        input{
+            padding: 10px 75px;
+            text-align: center;
+            border-radius: 20px;
+            border: 1px solid lightgray;
+
+        }
+        textarea{
+            padding: 10px 75px;
+            text-align: center;
+            border-radius: 20px;
+            border: 1px solid lightgray;
+
+        }
+        .button{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+        }
+        button{
+            margin-top: 15px;
+            font-size: 15px;
+            border-radius: 20px;
+            border: 1px solid lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Hi, I'm Dhvani Deshmukh</h1>
+                <p>A passionate Web Designer crafting modern, responsive websites.</p>
+                <a href="#portfolio" class="btn">View My Work</a>
+            </div>
+        </section>
+        <!-- Features Section -->
+        <section class="features">
+            <h1 class="title">What I Offer</h1>
+            <div class="feature-grid">
+                <div class="cards">
+                    <div class="icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Responsive Design</h3>
+                    <p>I create websites that look great on all devices — mobile, tablet, and desktop.</p>
+                </div>
+                <div class="cards">
+                    <div class="icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>Clean & Modern UI</h3>
+                    <p>Visually appealing layouts with a focus on simplicity, branding, and usability.</p>
+                </div>
+                <div class="cards">
+                    <div class="icon"><i class="fas fa-tools"></i></div>
+                    <h3>Custom Web Solutions</h3>
+                    <p>Tailored solutions to match your business goals using modern tools and code.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contactus">
+                <div class="form">
+                    <form class="contact-form">
+                        <h1 class="title">Contact Me</h1>
+
+                        <div class="input-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="input-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="input-group">
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <div class="button">
+                            <button type="submit" class="btn">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+        </section>
+    </div>
+</body>
+</html>
