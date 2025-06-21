@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog Post Layout</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f2f5;
+  padding: 20px;
+}
+
+.blog-layout {
+  display: grid;
+  grid-template-areas:
+    "main sidebar"
+    "footer footer";
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Main blog content */
+.main-content {
+  grid-area: main;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Sidebar with related posts */
+.sidebar {
+  grid-area: sidebar;
+  background-color: #f9f9f9;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar h2 {
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+}
+
+.sidebar a:hover {
+  color: #007acc;
+}
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .blog-layout {
+    grid-template-areas:
+      "main"
+      "sidebar"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="blog-layout">
+    <main class="main-content">
+      <h1>How to Design with CSS Grid</h1>
+      <p>CSS Grid is a powerful layout system for creating responsive web layouts with ease.</p>
+      <p>You can create multi-column designs, page structures, and more using grid-template-areas and grid lines.</p>
+    </main>
+
+    <aside class="sidebar">
+      <h2>Related Posts</h2>
+      <ul>
+        <li><a href="#">Flexbox vs Grid: Which to Use?</a></li>
+        <li><a href="#">Responsive Design Tips</a></li>
+        <li><a href="#">CSS Grid Examples</a></li>
+      </ul>
+    </aside>
+
+    <footer class="footer">
+      <p>&copy; 2025 Dhvani's Blog. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+ 8. Advanced CSS: Flexbox
+
+ Theory Assignments
+
+ 1. Explain the purpose of Flexbox and its benefits for responsive design.
+
+    Purpose of Flexbox:
+        Flexbox (Flexible Box Layout) is a CSS layout model that allows elements within a container to be aligned, distributed, and spaced efficiently—even when their sizes are unknown or dynamic.
+
+        Benefits for Responsive Design:
+
+         Flexible Layouts: Elements can grow, shrink, or wrap based on screen size, making designs more adaptable.
+
+         Simplified Alignment: Vertical and horizontal centering is easy with Flexbox.
+
+         Less Code: It reduces the need for floats, positioning, or media queries in many cases.
+
+         Dynamic Spacing: Automatically adjusts gaps and spacing between elements as needed.
+
+         Consistency Across Devices: Maintains structure on different screen sizes without complex calculations.
+
+
+ 2. Describe the main properties of Flexbox (flex-direction, justify-content, align-items).
+
+    a. flex-direction:
+
+        Defines the main axis direction along which flex items are placed.
+
+        row (default): Items arranged left to right.
+
+        row-reverse: Items arranged right to left.
+
+        column: Items arranged top to bottom.
+
+        column-reverse: Items arranged bottom to top.
+
+
+    b. justify-content:
+
+        Aligns items along the main axis (horizontal in row, vertical in column).
+
+        flex-start: Align to start.
+
+        flex-end: Align to end.
+
+        center: Centered along main axis.
+
+        space-between: Equal space between items.
+
+        space-around: Equal space around items.
+
+        space-evenly: Equal space between and around all items.
+
+
+
+    c. align-items:
+
+        Aligns items along the cross axis (perpendicular to the main axis).
+
+        stretch (default): Items stretch to fill the container.
+
+        flex-start: Align to top/left.
+
+        flex-end: Align to bottom/right.
+
+        center: Centered on the cross axis.
+
+        baseline: Align by text baseline.
+
+
+ 3. Discuss the difference between flex-grow, flex-shrink, and flex-basis
+
+    The flex-grow, flex-shrink, and flex-basis properties are used to control how flex items behave inside a flex container.
+
+    flex-grow:
+
+        flex-grow determines how much a flex item will grow relative to the other items when there is extra space in the container. If one item has a flex-grow value of 2 and another has 1, the first item will take up twice as much of the available space as the second item.
+
+    flex-shrink:
+        
+        flex-shrink defines how a flex item will shrink when there isn't enough space in the container. An item with a higher flex-shrink value will shrink more than one with a lower value.
+
+    flex-basis:
+    
+        flex-basis sets the initial size of a flex item before any growing or shrinking takes place. It can be set in pixels, percentages, or other CSS units, and it acts as the default size of the item before space is distributed.
+
+    All three properties can also be written in shorthand using the flex property like this: flex: 1 1 100px, where 1 is the grow value, the second 1 is the shrink value, and 100px is the basis.

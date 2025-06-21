@@ -1,0 +1,56 @@
+<!-- 3. Build a product card layout with Flexbox where elements (image, title, description, and price)
+ align and space evenly. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product cart</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+        }
+        .card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            width: 300px;
+            height: 450px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 20px;
+            padding-bottom: 20PX;
+        }
+        .card img{
+            width: 100%;
+            height: 250px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            
+        }
+        .title{
+            font-size: 20PX;
+            font-weight: bold;
+        }
+        .price{
+            font-size: 20px;
+        }
+        .description{
+            text-align: center;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/398510/02/sv01/fnd/IND/fmt/png/RS-X-Glow-UP-Women's-Sneakers" alt="">
+        <div class="title">PUMA</div>
+        <div class="price">₹4,949 <del style="color: lightgrey; font-size: 16px;">₹10,999</del></div>
+        <div class="description">RS-X is back. This future-retro silhouette made waves when it dropped in 2018, celebrated for its disruptive design, fresh</div>
+    </div>
+</body>
+</html>

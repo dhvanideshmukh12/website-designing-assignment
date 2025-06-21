@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multi-Section Grid Layout</title>
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: sans-serif;
+        padding: 10px;
+        background-color: #f9f9f9;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            "header header"
+            "sidebar main"
+            "footer footer";
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: auto 1fr auto;
+        min-height: 100vh;
+        gap: 10px;
+    }
+
+    .header {
+        grid-area: header;
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+        background-color: #f0f0f0;
+        padding: 20px;
+    }
+
+    .main {
+        grid-area: main;
+        background-color: #fff;
+        padding: 20px;
+    }
+
+    .footer {
+        grid-area: footer;
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 15px;
+    }
+
+    @media (max-width: 768px) {
+        .grid-container {
+            grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+            grid-template-columns: 1fr;
+        }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+        <header class="header">Header</header>
+        <aside class="sidebar">Sidebar</aside>
+        <main class="main">Main Content</main>
+        <footer class="footer">Footer</footer>
+  </div>
+</body>
+</html>

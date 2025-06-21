@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f2f2f2;
+    }
+
+    .gallery-title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (min-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    }
+
+  </style>
+</head>
+<body>
+  <h1 class="gallery-title">Image Gallery</h1>
+  <div class="gallery">
+    <img src="image/img1.jpg" alt="Image 1">
+    <img src="image/img2.jpeg" alt="Image 2">
+    <img src="image/img3.jpeg" alt="Image 3">
+    <img src="image/img4.jpeg" alt="Image 4">
+    <img src="image/img5.jpeg" alt="Image 5">
+    <img src="image/img6.jpeg" alt="Image 6">
+  </div>
+</body>
+</html>
