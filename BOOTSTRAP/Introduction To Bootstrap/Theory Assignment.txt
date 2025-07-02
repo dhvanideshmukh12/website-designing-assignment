@@ -1,0 +1,91 @@
+4. Introduction to Bootstrap
+
+Theory Assignments
+
+1. WhatisBootstrap, and why is it useful for website design?
+
+Bootstrap is a free, open-source front-end framework used for developing responsive and mobile-first websites. It includes HTML, CSS, and JavaScript-based design templates for common UI components like buttons, forms, modals, carousels, and more.
+
+Why it is useful:
+    Responsive Design: Automatically adjusts layout for different screen sizes.
+
+    Prebuilt Components: Offers ready-to-use UI components that speed up development.
+
+    Consistency: Ensures a consistent look and behavior across browsers and devices.
+
+    Customizable: You can customize Bootstrap using Sass variables and utility classes.
+
+    Grid System: Makes layout creation easier with a responsive, flexible grid.
+
+
+2. Explain the Bootstrap grid system and how it helps create responsive layouts.
+
+The Bootstrap grid system is a layout framework based on a 12-column grid. It allows developers to create responsive designs by dividing the page into rows and columns that adjust based on screen size.
+
+Key Features:
+    -Container: A wrapper for grid content (.container or .container-fluid)
+
+    -Rows: Horizontal groups of columns (.row)
+
+    -Columns: Content containers that adapt to screen sizes (.col, .col-md-6, .col-lg-4, etc.)
+
+Responsive Breakpoints:
+    -.col- → Extra small (xs, <576px)
+
+    -.col-sm- → Small (≥576px)
+
+    -.col-md- → Medium (≥768px)
+
+    -.col-lg- → Large (≥992px)
+
+    -.col-xl- → Extra Large (≥1200px)
+
+Example:
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">Column 1</div>
+      <div class="col-md-6">Column 2</div>
+    </div>
+  </div>
+
+3. List and explain at least three Bootstrap components (e.g., navbar, cards, buttons).
+
+a. Navbar
+
+  -A responsive navigation bar that can collapse on smaller screens.
+
+  -Includes branding, links, dropdowns, and toggler buttons.
+
+  Example:
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">MySite</a>
+    </nav>
+
+b. Cards
+
+  -Flexible content containers for images, text, and actions.
+
+  -Used to create content blocks like product previews or blog posts.
+
+  Example:
+
+    <div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Title</h5>
+        <p class="card-text">Some text content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+
+c. Buttons
+
+  -Pre-styled buttons with different colors and sizes.
+
+  -Classes like .btn-primary, .btn-danger, etc.
+
+  Example:
+
+    <button class="btn btn-success">Click Me</button>

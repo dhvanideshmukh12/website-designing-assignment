@@ -1,0 +1,64 @@
+<!--  1. Redesign the HTMLwebpageusing Bootstrap to:
+ o Implement a responsive grid layout for the header, main content, and footer.
+ o AddBootstrapbuttons and a styled form using Bootstrap classes. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Webpage</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <header class="bg-dark m-2 p-3 text-white">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <div class="logo mb-2 mb-md-0 fs-4 fw-bold">
+                    Dhvani
+                </div>
+                <ul class="list-unstyled d-flex flex-column flex-md-row gap-3 mb-0">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Skills</li>
+                    <li>Portfolio</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="d-flex align-items-center m-2 bg-light" style="height: 400px;">
+        <div class="container Hero w-100 d-flex flex-column align-items-center">
+            <h1>Main Content</h1>
+            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam esse harum maxime animi iste. Ad, sapiente! Non vitae nisi, deserunt voluptatem illo consequuntur eaque quia quos voluptatum iusto obcaecati id.</p>
+            <button class="hover-overlay bg-primary border-0 p-1">Explore More <i class="bi bi-arrow-right"></i></button>
+        </div>
+    </main>
+    <footer class="bg-dark text-white p-2">
+        <div class="container">
+            <div class="row">
+                <p class="col d-flex gap-3 justify-content-start align-items-center mb-0">
+                    <i class="bi bi-bootstrap-fill fs-4"></i>© 2025 Company, Inc
+                </p>
+                <p class="col d-flex justify-content-end gap-3 fs-4 mb-0">
+                    <a href="#" class="text-white" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="text-white" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-white" title="Instagram"><i class="bi bi-instagram"></i></a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

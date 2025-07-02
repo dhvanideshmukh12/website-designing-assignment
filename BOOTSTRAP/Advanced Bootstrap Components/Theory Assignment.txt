@@ -1,0 +1,188 @@
+ 5. Advanced Bootstrap Components
+
+
+ Theory Assignments
+
+ 1. Explain how modals and carousels work in Bootstrap.
+
+    Modals:
+
+        -A modal is a popup dialog box that overlays the main content. It's used for alerts, forms, confirmations, etc.
+
+        -Bootstrap modals are built using HTML, CSS, and JavaScript, and they are triggered using data attributes or JavaScript methods.\
+    
+        Key Parts of a Modal:
+
+            .modal: Main wrapper.
+
+            .modal-dialog: Container for the modal box.
+
+            .modal-content: Actual content area inside the modal.
+
+        How It Works:
+
+            -Trigger with:
+                <button data-bs-toggle="modal" data-bs-target="#myModal">Open Modal</button>
+
+            -Modal structure:
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">...</div>
+                        <div class="modal-body">...</div>
+                        <div class="modal-footer">...</div>
+                        </div>
+                    </div>
+                </div>
+
+
+    Carousels:
+
+        -A carousel is a slideshow component used to cycle through elements like images or text.
+
+        -Bootstrap provides built-in classes and JavaScript to make it interactive.
+
+        Key Parts of a Carousel:
+
+            .carousel: Main container.
+
+            .carousel-inner: Wrapper for slides.
+
+            .carousel-item: Each slide.
+
+            Optional: .carousel-indicators, .carousel-control-prev, .carousel-control-next.
+
+        Example:
+
+            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img src="img1.jpg" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="img2.jpg" class="d-block w-100">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" data-bs-target="#myCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" data-bs-target="#myCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+
+
+
+ 2. Describe the purpose of utility classes in Bootstrap and give examples.
+
+    Utility classes in Bootstrap are short, predefined classes that allow developers to apply common CSS styles quickly without writing custom CSS code. They help speed up development, ensure consistency, and keep HTML clean and manageable.
+
+    Purpose of utility classes:
+
+        Quickly apply styles like margin, padding, colors, and alignment.
+
+        Avoid writing repetitive CSS.
+
+        Maintain a consistent look across all pages.
+
+        Allow rapid prototyping and layout adjustments.
+    
+    Examples of utility classes:
+
+        Spacing utilities:
+
+            mt-3 adds top margin.
+
+            p-2 adds padding on all sides.
+
+            mb-0 removes bottom margin.
+
+        Text utilities:
+
+            text-center aligns text to the center.
+
+            text-uppercase makes all text uppercase.
+
+            text-muted gives lighter text color.
+
+        Display utilities:
+
+            d-none hides an element.
+
+            d-block displays the element as a block.
+
+            d-flex applies flexbox layout.
+
+        Color utilities:
+
+            bg-primary sets a primary background color.
+
+            text-danger makes the text red.
+
+            bg-light adds a light background.
+
+        Flex utilities:
+
+            justify-content-between places space between flex items.
+
+            align-items-center vertically centers items in a flex container.
+
+        Position utilities:
+
+            position-relative sets relative positioning.
+
+            top-0 moves an element to the top.
+
+    Example usage:
+
+        <div class="bg-light p-3 text-center text-danger">
+            This is a styled box using utility classes!
+        </div>
+    
+    Utility classes are a key feature in Bootstrap that help you build fast, responsive layouts without writing much custom CSS.
+
+
+ 3. Discuss the importance of customizing Bootstrap variables for unique styling.   
+    
+    Why Customize Bootstrap Variables?
+
+        -By default, Bootstrap has a generic theme (colors, spacing, typography).
+
+        -Customizing SCSS variables lets you match your brand's identity or design needs without writing extra CSS.
+
+    Benefits:
+
+        -Consistent design across the project.
+
+        -Easier maintenance (change one variable, apply globally).
+
+        -Fewer overrides, leading to cleaner CSS.
+
+    How It’s Done:
+
+        1. Bootstrap uses Sass variables (like $primary, $font-family-base).
+
+        2. You can override them before importing Bootstrap’s SCSS.
+
+    Example:
+
+        // Custom variables
+        $primary: #6f42c1;
+        $font-family-base: 'Poppins', sans-serif;
+
+        // Import Bootstrap
+        @import "bootstrap";
+
+    Common Customizable Variables:
+
+        $primary, $secondary, $success, $danger (colors)
+
+        $border-radius (corner style)
+
+        $spacer (spacing units)
+
+        $font-size-base, $line-height-base (typography)
+
+    Result:
+
+        A completely tailored design while still using Bootstrap’s grid, components, and utilities.
