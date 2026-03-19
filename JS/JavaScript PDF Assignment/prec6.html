@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scroll Background Change</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 15px 20px;
+      background-color: transparent;
+      color: rgb(207, 190, 190);
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+    }
+
+    .scrolled {
+      background-color: #333;
+    }
+
+    .content {
+      height: 2000px;
+      background: linear-gradient(#fff, #ddd);
+      padding-top: 70px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar" id="navbar">
+    My Menu Bar
+  </div>
+
+  <div class="content">
+    <h1>Scroll down to see the effect...</h1>
+  </div>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 0) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+</body>
+</html>

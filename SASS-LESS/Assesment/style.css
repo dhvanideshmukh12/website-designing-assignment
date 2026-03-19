@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #2e1b26;
+}
+
+.banner-section {
+  padding: 60px 0;
+  text-align: center;
+  color: #ffffff;
+}
+.banner-section .container {
+  width: 90%;
+  margin: auto;
+}
+.banner-section .heading-texts {
+  margin-bottom: 50px;
+}
+.banner-section .heading-texts .logo {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  transform: rotate(45deg);
+}
+.banner-section .heading-texts .heading {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.banner-section .heading-texts .heading-text {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+.banner-section .heading-texts .buttons .btn {
+  background: #b98fa3;
+  border: none;
+  padding: 8px 16px;
+  margin: 0 5px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+}
+.banner-section .heading-texts .buttons .btn:hover {
+  opacity: 0.8;
+}
+.banner-section .cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.banner-section .cards .card {
+  background: #a8c9c0;
+  width: 280px;
+  padding: 100px 20px;
+  position: relative;
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+}
+.banner-section .cards .card .card-text {
+  font-size: 12px;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+.banner-section .cards .card .card-btn {
+  padding: 6px 12px;
+  border: none;
+  background: white;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.banner-section .cards .card .card-btn:hover {
+  background: #eee;
+}
+
+/*# sourceMappingURL=style.css.map */

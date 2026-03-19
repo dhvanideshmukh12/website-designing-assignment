@@ -1,0 +1,60 @@
+<!-- Write a javascript code to select color from color plate and display it in particular division. -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Color Picker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .color-box {
+      width: 200px;
+      height: 200px;
+      border-radius: 10px;
+      border: 2px solid #ccc;
+      margin-top: 20px;
+      background-color: #ffffff;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="color"] {
+      margin-top: 20px;
+      padding: 5px;
+      width: 120px;
+      height: 40px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Select a Color</h2>
+    <input type="color" id="colorPicker" />
+    <div class="color-box" id="displayBox"></div>
+  </div>
+
+  <script>
+    const colorPicker = document.getElementById('colorPicker');
+    const displayBox = document.getElementById('displayBox');
+
+    colorPicker.addEventListener('input', function () {
+      displayBox.style.backgroundColor = this.value;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Result Calculator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+      width: 450px;
+    }
+    h2 {
+      text-align: center;
+      color: #2b5cff;
+      margin-bottom: 25px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 12px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      background: #2b5cff;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1c3ecb;
+    }
+    .error {
+      color: red;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 15px;
+    }
+    .result {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .pass {
+      color: green;
+    }
+    .fail {
+      color: red;
+    }
+    .grade {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #333;
+    }
+    .fail-list {
+      margin-top: 10px;
+      color: red;
+      font-weight: normal;
+    }
+    .distinction {
+      color: #d48806;
+      font-weight: bold;
+      font-size: 17px;
+      margin-top: 10px;
+    }
+    .buttons{
+      display: flex;
+      gap:20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Web Dev Result Calculator</h2>
+<div id="pdfContent">
+  <form id="marksForm">
+    <label for="html">HTML</label>
+    <input type="number" id="html" placeholder="Enter HTML marks " />
+
+    <label for="css">CSS</label>
+    <input type="number" id="css" placeholder="Enter CSS marks " />
+
+    <label for="js">JavaScript</label>
+    <input type="number" id="js" placeholder="Enter JavaScript marks " />
+
+    <label for="jquery">jQuery</label>
+    <input type="number" id="jquery" placeholder="Enter jQuery marks " />
+
+    <label for="bootstrap">Bootstrap</label>
+    <input type="number" id="bootstrap" placeholder="Enter Bootstrap marks " />
+
+    <label for="tailwind">Tailwind</label>
+    <input type="number" id="tailwind" placeholder="Enter Tailwind marks " />
+
+    <label for="wordpress">WordPress</label>
+    <input type="number" id="wordpress" placeholder="Enter WordPress marks " />
+
+    <div class="buttons">
+      <button type="button" onclick="calculateResult()">Show Result</button>
+      <button type="button" class="btn-danger" onclick="downloadPDF()">Download PDF</button>
+    </div>
+  </form>
+  <div class="result" id="output"></div>
+</div>
+
+  <div class="error" id="errorMsg"></div>
+</div>
+
+<script>
+  function calculateResult() {
+    const subjects = {
+      "HTML": parseFloat(document.getElementById("html").value),
+      "CSS": parseFloat(document.getElementById("css").value),
+      "JavaScript": parseFloat(document.getElementById("js").value),
+      "jQuery": parseFloat(document.getElementById("jquery").value),
+      "Bootstrap": parseFloat(document.getElementById("bootstrap").value),
+      "Tailwind": parseFloat(document.getElementById("tailwind").value),
+      "WordPress": parseFloat(document.getElementById("wordpress").value)
+    };
+
+    const maxMarks = 700;
+    let total = 0;
+    let failedSubjects = [];
+    let errorMsg = document.getElementById("errorMsg");
+    let output = document.getElementById("output");
+
+    errorMsg.textContent = "";
+    output.innerHTML = "";
+    output.className = "result";
+
+    for (let subject in subjects) {
+      let mark = subjects[subject];
+
+      if (isNaN(mark) || mark < 0 || mark > 100) {
+        errorMsg.textContent = `❌ Invalid marks in "${subject}". Please enter 0–100 only.`;
+        return;
+      }
+
+      if (mark < 40) {
+        failedSubjects.push(subject);
+      }
+
+      total += mark;
+    }
+
+    let percentage = (total / maxMarks) * 100;
+    let grade = "";
+
+    if (failedSubjects.length > 0) {
+      output.classList.add("fail");
+      output.innerHTML = `
+        Total Marks: ${total} / ${maxMarks}<br>
+        Percentage: ${percentage.toFixed(2)}%<br>
+        Result: ❌ <strong>Fail</strong><br>
+        <div class="fail-list">
+          Failed Subjects (${failedSubjects.length}): ${failedSubjects.join(", ")}
+        </div>
+        <div class="grade">Grade: F</div>
+      `;
+    } else {
+      output.classList.add("pass");
+
+      if (percentage >= 90) grade = "A+";
+      else if (percentage >= 80) grade = "A";
+      else if (percentage >= 70) grade = "B";
+      else if (percentage >= 60) grade = "C";
+      else grade = "D";
+
+      output.innerHTML = `
+        Total Marks: ${total} / ${maxMarks}<br>
+        Percentage: ${percentage.toFixed(2)}%<br>
+        Result: ✅ <strong>Pass</strong><br>
+        <div class="grade">Grade: ${grade}</div>
+      `;
+
+      if (percentage >= 70) {
+        output.innerHTML += `<div class="distinction">🎉 Pass with Distinction!</div>`;
+      }
+    }
+    
+  }
+  function downloadPDF() {
+  const resultDiv = document.getElementById('pdfContent');
+
+  if (resultDiv.innerHTML.trim() === "") {
+    alert("Please generate result first.");
+    return;
+  }
+
+  const opt = {
+    margin: 0.5,
+    filename: 'student_result.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2 },
+    jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+  };
+
+  html2pdf().set(opt).from(resultDiv).save();
+}
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+</body>
+</html>

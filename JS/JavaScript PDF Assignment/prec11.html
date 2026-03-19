@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f8ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .calculator {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    button {
+      width: 50px;
+      height: 40px;
+      font-size: 18px;
+      margin: 5px;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div class="calculator">
+  <h2>Math Operations</h2>
+  <input type="number" id="num1" placeholder="Enter first number">
+  <input type="number" id="num2" placeholder="Enter second number">
+
+  <div>
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('*')">*</button>
+    <button onclick="calculate('/')">/</button>
+    <button onclick="calculate('%')">%</button>
+  </div>
+
+  <div class="result" id="result"></div>
+</div>
+
+<script>
+  function calculate(operator) {
+    const n1 = parseFloat(document.getElementById('num1').value);
+    const n2 = parseFloat(document.getElementById('num2').value);
+    let result;
+
+    if (isNaN(n1) || isNaN(n2)) {
+      document.getElementById('result').innerHTML = "❌ Please enter both numbers.";
+      return;
+    }
+
+    switch(operator) {
+      case '+':
+        result = n1 + n2;
+        break;
+      case '-':
+        result = n1 - n2;
+        break;
+      case '*':
+        result = n1 * n2;
+        break;
+      case '/':
+        result = n2 !== 0 ? (n1 / n2).toFixed(2) : "❌ Cannot divide by zero.";
+        break;
+      case '%':
+        result = n2 !== 0 ? n1 % n2 : "❌ Cannot modulo by zero.";
+        break;
+    }
+
+    document.getElementById('result').innerHTML = `Result: ${result}`;
+  }
+</script>
+
+</body>
+</html>
