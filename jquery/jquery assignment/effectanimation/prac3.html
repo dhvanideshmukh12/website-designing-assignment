@@ -1,0 +1,104 @@
+<!-- 3. Create an expanding Read More / Read Less section using jQuery. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Read More / Read Less</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Inter', sans-serif;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
+        }
+
+        .card{
+            width:380px;
+            background: rgba(255,255,255,0.8);
+            padding:25px;
+            border-radius:20px;
+            backdrop-filter: blur(10px);
+            box-shadow:0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        h2{
+            margin-bottom:10px;
+            color:#2c3e50;
+        }
+
+        p{
+            color:#555;
+            line-height:1.6;
+        }
+
+        .more-text{
+            display:none;
+        }
+
+        .btn{
+            margin-top:15px;
+            padding:8px 18px;
+            border:none;
+            border-radius:20px;
+            background:#a78bfa;
+            color:#fff;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:#8b5cf6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>About Me</h2>
+
+        <p>
+            I am a passionate web developer who loves creating beautiful websites.
+            <span class="dots">...</span>
+
+            <span class="more-text">
+                I specialize in HTML, CSS, JavaScript, and jQuery. I enjoy building
+                responsive designs and interactive UI components that improve user experience.
+            </span>
+        </p>
+
+        <button class="btn" id="readBtn">Read More</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#readBtn").click(function(){
+
+                $(".more-text").slideToggle(400);
+                $(".dots").toggle();
+
+            
+                if($(this).text() == "Read More"){
+                    $(this).text("Read Less");
+                } else {
+                    $(this).text("Read More");
+                }
+
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+2. Effects & Animations
+
+1. What are jQuery effects?
+jQuery effects are built-in methods used to add animations and visual changes to elements on a webpage.
+
+They help to:
+
+-Show / hide elements
+-Create smooth transitions
+-Improve user experience (UI)
+
+Examples:
+.hide() / .show()
+.fadeIn() / .fadeOut()
+.slideUp() / .slideDown()
+.animate()
+
+2. Explain .hide() and .show() methods.
+
+.hide()
+Hides the selected element
+Sets display: none
+eg. $("#box").hide();
+
+.show()
+Displays the hidden element
+Restores it back to visible
+eg. $("#box").show();
+
+3. Explain .fadeIn() and .fadeOut() methods.
+
+These methods create smooth opacity-based animations.
+
+.fadeIn()
+Shows element with fade effect
+eg. $("#box").fadeIn(1000);
+
+.fadeOut()
+Hides element with fade effect
+eg. $("#box").fadeOut(1000);
+
+4. What is .slideToggle()?
+
+Toggles between slideUp() and slideDown()
+Used for dropdowns, FAQs, menus
+eg. $("#box").slideToggle(500);
+
+5. Explain animation chaining in jQuery.
+
+Animation chaining means running multiple jQuery methods one after another on the same element.
+$("#box")
+    .slideUp(500)
+    .slideDown(500)
+    .fadeOut(500)
+    .fadeIn(500);

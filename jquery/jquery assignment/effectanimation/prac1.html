@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fade In & Fade Out</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Inter', sans-serif;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background: linear-gradient(135deg, #dbeafe, #e0f7fa);
+        }
+
+        .container{
+            text-align:center;
+            background: rgba(255,255,255,0.6);
+            padding:40px;
+            border-radius:20px;
+            backdrop-filter: blur(10px);
+            box-shadow:0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        h1{
+            margin-bottom:20px;
+            color:#2c3e50;
+        }
+
+        #box{
+            width:200px;
+            height:120px;
+            margin:20px auto;
+            background:#a5b4fc;
+            border-radius:15px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            color:#fff;
+            font-weight:600;
+        }
+
+        .buttons{
+            margin-top:20px;
+        }
+
+        button{
+            padding:10px 20px;
+            margin:5px;
+            border:none;
+            border-radius:25px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .fadein{
+            background:#86efac;
+        }
+
+        .fadeout{
+            background:#fca5a5;
+        }
+
+        button:hover{
+            transform:scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Fade In & Fade Out</h1>
+
+        <div id="box">Hello </div>
+
+        <div class="buttons">
+            <button class="fadein" id="fadeInBtn">Fade In</button>
+            <button class="fadeout" id="fadeOutBtn">Fade Out</button>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#fadeOutBtn").click(function(){
+                $("#box").fadeOut(800);
+            });
+
+            $("#fadeInBtn").click(function(){
+                $("#box").fadeIn(800);
+            });
+
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!-- 2. Change background color of an element on button click -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Background Color</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins', sans-serif;
+        }
+
+        .banner{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+            text-align:center;
+            color:#fff;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            transition:0.5s;
+        }
+
+        h1{
+            margin-bottom:20px;
+            font-size:40px;
+        }
+
+        .btn-group{
+            display:flex;
+            gap:10px;
+        }
+
+        button{
+            padding:10px 20px;
+            border:none;
+            border-radius:25px;
+            cursor:pointer;
+            font-weight:500;
+            transition:0.3s;
+        }
+
+        .btn1{ 
+            background:#ff6b6b; 
+            color:#fff; 
+        }
+        .btn2{ 
+            background:#4ecdc4; 
+            color:#000; 
+        }
+        .btn3{ 
+            background:#ffe66d; 
+            color:#000; 
+        }
+
+        button:hover{
+            transform:scale(1.08);
+        }
+    </style>
+</head>
+<body>
+
+    <section class="banner" id="banner">
+        <h1>Change Banner Background</h1>
+
+        <div class="btn-group">
+            <button class="btn1" id="color1">Red Theme</button>
+            <button class="btn2" id="color2">Green Theme</button>
+            <button class="btn3" id="color3">Yellow Theme</button>
+        </div>
+    </section>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#color1").click(function(){
+                $("#banner").css("background", "linear-gradient(135deg, #ff6b6b, #ff8787)");
+            });
+
+            $("#color2").click(function(){
+                $("#banner").css("background", "linear-gradient(135deg, #38ef7d, #11998e)");
+            });
+
+            $("#color3").click(function(){
+                $("#banner").css("background", "linear-gradient(135deg, #fddb92, #d1fdff)");
+            });
+
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!-- 1. Change paragraph text dynamically using jQuery. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Text Change</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Inter', sans-serif;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background: linear-gradient(135deg, #fdfbfb, #ebedee);
+        }
+
+        .card{
+            background:#fff;
+            padding:30px;
+            border-radius:20px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.1);
+            text-align:center;
+            width:350px;
+        }
+
+        p{
+            margin-bottom:20px;
+            color:#333;
+            font-size:18px;
+        }
+
+        button{
+            padding:10px 20px;
+            border:none;
+            border-radius:25px;
+            background:#6366f1;
+            color:#fff;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:#4f46e5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <p id="para">This is the original text.</p>
+        <button id="changeBtn">Change Text</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#changeBtn").click(function(){
+                $("#para").text("The text has been changed dynamically!");
+            });
+        });
+    </script>
+
+</body>
+</html>

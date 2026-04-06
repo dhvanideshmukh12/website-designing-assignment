@@ -1,0 +1,78 @@
+3. DOM Manipulation & Events
+
+1. How can text be changed dynamically using jQuery?
+
+You can change text using:
+
+.text()
+.html()
+
+Example:
+$("#para").text("New Text Here");
+
+2. Explain how CSS can be modified using jQuery.
+
+You can change CSS using .css() method.
+
+Example:
+$("#box").css("background", "blue");
+
+Multiple properties:
+$("#box").css({
+    "background": "blue",
+    "color": "white",
+    "font-size": "20px"
+});
+3. What is the use of .html() and .text()?
+
+.text()
+Sets or gets plain text only
+Ignores HTML tags
+
+$("#para").text("<b>Hello</b>");
+
+Output: <b>Hello</b> (not bold)
+
+.html()
+Sets or gets HTML content
+Supports tags
+$("#para").html("<b>Hello</b>");
+
+Output: Hello (bold)
+
+
+4. Explain click, keyup, and change events.
+
+click()
+Triggered when element is clicked
+$("#btn").click(function(){
+    alert("Button clicked");
+});
+
+
+keyup()
+Triggered when key is released (typing)
+$("#input").keyup(function(){
+    console.log("Typing...");
+});
+
+change()
+Triggered when input value changes
+$("#select").change(function(){
+    alert("Value changed");
+});
+
+
+5. What is event handling in jQuery?
+
+Event handling means responding to user actions like:
+
+-Click
+-Typing
+-Hover
+-Form changes
+
+Example:
+$("#btn").click(function(){
+    $("#box").hide();
+});

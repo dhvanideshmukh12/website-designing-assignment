@@ -1,0 +1,92 @@
+<!-- 2. Write a program using .slideToggle() for a content section. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide Toggle Example</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Inter', sans-serif;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background: linear-gradient(135deg, #e0f2fe, #f0fdf4);
+        }
+
+        .container{
+            width:350px;
+            background: rgba(255,255,255,0.7);
+            padding:25px;
+            border-radius:20px;
+            backdrop-filter: blur(10px);
+            box-shadow:0 10px 25px rgba(0,0,0,0.1);
+            text-align:center;
+        }
+
+        h2{
+            margin-bottom:15px;
+            color:#2c3e50;
+        }
+
+        .toggle-btn{
+            width:100%;
+            padding:12px;
+            border:none;
+            border-radius:10px;
+            background:#93c5fd;
+            color:#fff;
+            font-weight:600;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .toggle-btn:hover{
+            background:#60a5fa;
+        }
+
+        .content{
+            margin-top:15px;
+            padding:15px;
+            background:#f8fafc;
+            border-radius:10px;
+            display:none; 
+            color:#334155;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>About Section</h2>
+
+        <button class="toggle-btn" id="toggleBtn">
+            Show / Hide Content
+        </button>
+
+        <div class="content" id="contentBox">
+            This is a hidden content section. It smoothly slides up and down using jQuery slideToggle(). ✨
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#toggleBtn").click(function(){
+                $("#contentBox").slideToggle(500);
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+1. Introduction to jQuery
+Theory Assignments
+
+
+1. What is jQuery? Why is it used in web development?
+
+jQuery is a fast, lightweight JavaScript library designed to simplify HTML DOM manipulation, event handling, animation, and AJAX.
+
+Why it is used:
+
+-Reduces complex JavaScript code into fewer lines
+-Handles cross-browser compatibility issues
+-Makes DOM manipulation easy
+-Simplifies AJAX calls
+-Provides built-in effects and animations
+
+Example:
+JavaScript
+document.getElementById("demo").innerHTML = "Hello";
+
+jQuery
+$("#demo").text("Hello");
+
+2. Explain the advantages of jQuery over JavaScript.
+
+- Less code – Write more with fewer lines
+- Cross-browser support – Works consistently across browsers
+- Easy DOM manipulation
+- Built-in animations & effects
+- Simplified event handling
+- AJAX support is easier
+- Chainable methods (write multiple actions in one line)
+
+3. How do you include jQuery using CDN?
+
+You can include jQuery using a CDN link inside the <head> or before closing </body> tag.
+
+Example:
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+CDN = Content Delivery Network (loads faster from global servers)
+
+4. Explain jQuery selector syntax: $(selector).action().
+
+This is the basic syntax of jQuery.
+
+-$ → jQuery function
+-selector → selects HTML elements
+-action() → performs an operation
+
+Example:
+$("p").hide();    
+$("#id").show(); 
+$(".class").fadeIn();
+
+
+5. What is the difference between JavaScript DOM and jQuery DOM manipulation?
+
+JavaScript DOM:
+JavaScript DOM manipulation is the native method used to access, modify, and control HTML elements directly using JavaScript. It requires more code and can be complex, especially when dealing with browser compatibility and event handling.
+document.getElementById("demo").style.color = "red";
+
+jQuery DOM:
+jQuery DOM manipulation is a simplified way of working with HTML elements using the jQuery library. It requires less code, has an easy syntax, and automatically handles cross-browser compatibility, making it faster and more convenient for developers.
+$("#demo").css("color", "red");
+

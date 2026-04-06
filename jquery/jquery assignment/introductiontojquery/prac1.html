@@ -1,0 +1,90 @@
+<!-- 1. Write a program to hide a paragraph using jQuery. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Beautiful Banner with jQuery</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins', sans-serif;
+        }
+
+        body{
+            background:#f4f4f4;
+        }
+
+        .banner{
+            height:100vh;
+            background: linear-gradient(135deg, #899cf4, #0040ff);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            color:#fff;
+        }
+
+        .banner-content{
+            max-width:600px;
+            padding:20px;
+        }
+
+        .banner h1{
+            font-size:40px;
+            margin-bottom:15px;
+        }
+
+        .banner p{
+            font-size:18px;
+            margin-bottom:25px;
+            line-height:1.6;
+        }
+
+        .btn{
+            padding:12px 25px;
+            border:none;
+            border-radius:30px;
+            background:#fff;
+            color:#000;
+            font-weight:500;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:#14002a;
+            color:#ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Welcome to My Website</h1>
+            <p id="para">
+                This is a beautiful banner section. Click the button below to hide this paragraph using jQuery.
+            </p>
+            <button class="btn" id="hideBtn">Hide Text</button>
+        </div>
+    </section>
+
+    <script>
+        $(document).ready(function(){
+            $("#hideBtn").click(function(){
+                $("#para").fadeOut(800);
+            });
+        });
+    </script>
+
+</body>
+</html>

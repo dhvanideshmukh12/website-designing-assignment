@@ -1,0 +1,95 @@
+<!-- 4. Demonstrate chained animations using jQuery. -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Chained Animations</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Inter', sans-serif;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background: linear-gradient(135deg, #e0f7fa, #e0e7ff);
+        }
+
+        .container{
+            text-align:center;
+        }
+
+        h1{
+            margin-bottom:20px;
+            color:#2c3e50;
+        }
+
+        #box{
+            width:120px;
+            height:120px;
+            margin:20px auto;
+            background:#60a5fa;
+            border-radius:15px;
+        }
+
+        button{
+            padding:10px 20px;
+            border:none;
+            border-radius:25px;
+            background:#031e41;
+            color:#fff;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            transform:scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Chained Animations</h1>
+
+        <div id="box"></div>
+
+        <button id="animateBtn">Start Animation</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#animateBtn").click(function(){
+
+                $("#box")
+                    .slideUp(400)
+                    .slideDown(400)
+                    .fadeOut(400)
+                    .fadeIn(400)
+                    .animate({
+                        width: "200px",
+                        height: "200px"
+                    }, 500)
+                    .animate({
+                        width: "120px",
+                        height: "120px"
+                    }, 500);
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>
